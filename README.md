@@ -28,3 +28,10 @@
 **Source Code:** github.com/hamza-choudhury/etf-cost-intelligence-engine
 
 *Educational tool demonstrating ETF product knowledge, competitive intelligence, and Python data analysis.*
+
+---
+
+### Support the Project
+If you found this useful, you can support my work here:
+* ☕ [Buy Me a Coffee](https://buymeacoffee.com/hchoudhury)
+* 💙 [PayPal](https://www.paypal.com/paypalme/HChoudhury0)
