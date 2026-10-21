@@ -31,7 +31,19 @@
 
 ---
 
-### Support the Project
-If you found this useful, you can support my work here:
-* ☕ [Buy Me a Coffee](https://buymeacoffee.com/hchoudhury)
-* 💙 [PayPal](https://www.paypal.com/paypalme/HChoudhury0)
+## ☕ Support & Appreciation
+
+If you find this project valuable for your research, education, or professional work, consider supporting its development:
+
+### **One-time Support**
+* **PayPal**: [https://paypal.me/HChoudhury0](https://paypal.me/HChoudhury0)
+* **Buy Me A Coffee**: [https://buymeacoffee.com/hchoudhury](https://buymeacoffee.com/hchoudhury)
+
+### **Recurring Support**
+* **PayPal**: Set up monthly contributions through the link above
+
+### **Other Ways to Support**
+* **Star the repository** on GitHub
+* **Share with colleagues** who might find it useful
+* **Provide feedback** for improvements
+* **Contribute code** via pull requests
