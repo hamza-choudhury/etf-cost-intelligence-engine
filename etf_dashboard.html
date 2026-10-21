@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ETF Cost Intelligence Engine</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>
+  body { margin:0; background:#f5f7fa; font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:#0b1f3a; }
+  .wrap { max-width:1100px; margin:0 auto; padding:24px; }
+  header { background:#0b1f3a; color:white; padding:28px 32px; border-radius:14px; }
+  header h1 { margin:0; font-size:26px; }
+  header p { margin:6px 0 0; opacity:0.85; }
+  .generated { font-size:12px; opacity:0.65; margin-top:8px; }
+  .banner { background:#fff7ed; border-left:6px solid #f59e0b; padding:14px 18px;
+             border-radius:10px; margin:18px 0; font-size:13.5px; line-height:1.5; }
+  .kpi-row { display:flex; gap:14px; flex-wrap:wrap; margin:18px 0; }
+  .kpi { flex:1 1 200px; background:white; padding:18px; border-radius:12px;
+          box-shadow:0 2px 8px rgba(11,31,58,0.07); }
+  .kpi-value { font-size:28px; font-weight:700; color:#1f6feb; }
+  .kpi-label { font-size:13px; color:#6b7280; margin-top:4px; }
+  .card { background:white; padding:22px; border-radius:12px;
+           box-shadow:0 2px 8px rgba(11,31,58,0.07); margin:18px 0; }
+  .card h2 { margin:0 0 12px; font-size:18px; }
+  table.compare { width:100%; border-collapse:collapse; font-size:13.5px; }
+  table.compare th { text-align:left; background:#0b1f3a; color:white;
+                      padding:10px; font-weight:600; }
+  table.compare td { padding:9px 10px; border-bottom:1px solid #e5e7eb; }
+  table.compare tbody tr:nth-child(even) { background:#f9fafb; }
+  td.num { text-align:right; }
+  a { color:#1f6feb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .narrative-headline { font-size:15px; font-weight:600; margin:0 0 14px; color:#0b1f3a; }
+  .fact-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:10px 24px; margin-bottom:16px; }
+  .fact { border-left:3px solid #1f6feb; padding-left:10px; }
+  .fact-label { font-size:11.5px; color:#6b7280; text-transform:uppercase; letter-spacing:0.04em; }
+  .fact-value { font-size:14.5px; font-weight:600; color:#0b1f3a; }
+  .narrative-body { font-size:14px; line-height:1.6; margin:0; }
+  .open-btn { display:inline-block; background:#0b1f3a; color:white; padding:12px 22px;
+               border-radius:10px; text-decoration:none; font-weight:600; margin-top:8px; }
+  .open-btn:hover { background:#1f6feb; }
+  footer { text-align:center; color:#6b7280; font-size:12px; margin:24px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>ETF Cost Intelligence Engine</h1>
+    <p>S&amp;P 500 UCITS ETF · Six Provider Comparison</p>
+    <div class="generated">Generated 21 October 2026, 01:13</div>
+  </header>
+
+  <div class="banner">This dashboard is an analytical exercise, not investment advice. All data is taken from provider published documents and product pages as of October 2026. The comparison uses unhedged accumulating share classes, except Amundi, which is distributing. Figures may differ from live market data and should be verified against the source links listed per fund in the comparison table.</div>
+
+  
+<div class="kpi-row">
+  <div class="kpi"><div class="kpi-value">6</div>
+       <div class="kpi-label">Funds compared</div></div>
+  <div class="kpi"><div class="kpi-value">3 bps</div>
+       <div class="kpi-label">Cheapest TER · State Street</div></div>
+  <div class="kpi"><div class="kpi-value">$154.5bn</div>
+       <div class="kpi-label">Largest fund · BlackRock</div></div>
+  <div class="kpi"><div class="kpi-value">6/7</div>
+       <div class="kpi-label">Risk indicator (all funds)</div></div>
+</div>
+
+
+  <div class="card"><div>                            <div id="5203ec4f-d362-4613-b0d0-28343782f080" class="plotly-graph-div" style="height:340px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("5203ec4f-d362-4613-b0d0-28343782f080")) {                    Plotly.newPlot(                        "5203ec4f-d362-4613-b0d0-28343782f080",                        [{"hovertemplate":"%{y}\u003cbr\u003eTER: %{x} bps\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#1f6feb","#1f6feb","#f59e0b","#f59e0b","#1f6feb","#1f6feb"]},"orientation":"h","text":["3 bps","3 bps","5 bps","5 bps","7 bps","7 bps"],"textposition":"outside","x":[3.0,3.0,5.0,5.0,7.000000000000001,7.000000000000001],"y":["State Street","Xtrackers","Invesco","Amundi","Vanguard","BlackRock"],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"margin":{"l":10,"r":40,"t":50,"b":40},"font":{"family":"system-ui, -apple-system, Segoe UI, Roboto, sans-serif","color":"#0b1f3a"},"title":{"text":"TER by provider (cheapest first)"},"xaxis":{"title":{"text":"TER (basis points)"}},"yaxis":{"title":{"text":""}},"height":340,"plot_bgcolor":"white","paper_bgcolor":"white","showlegend":false},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div></div>
+  <div class="card"><div>                            <div id="ebe90e1d-cb51-41f1-affc-4352c24487c9" class="plotly-graph-div" style="height:340px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("ebe90e1d-cb51-41f1-affc-4352c24487c9")) {                    Plotly.newPlot(                        "ebe90e1d-cb51-41f1-affc-4352c24487c9",                        [{"hovertemplate":"%{y}\u003cbr\u003eAUM: $%{x:.1f}bn\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#1f6feb","#1f6feb","#f59e0b","#1f6feb","#f59e0b","#1f6feb"]},"orientation":"h","text":["$4.2bn","$19.2bn","$33.6bn","$36.3bn","$59.1bn","$154.5bn"],"textposition":"outside","x":[4.2,19.2,33.6,36.3,59.1,154.5],"y":["Xtrackers","State Street","Amundi","Vanguard","Invesco","BlackRock"],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"margin":{"l":10,"r":60,"t":50,"b":40},"font":{"family":"system-ui, -apple-system, Segoe UI, Roboto, sans-serif","color":"#0b1f3a"},"title":{"text":"Fund size by provider (largest first)"},"xaxis":{"title":{"text":"AUM (USD billions)"}},"yaxis":{"title":{"text":""}},"height":340,"plot_bgcolor":"white","paper_bgcolor":"white","showlegend":false},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div></div>
+  <div class="card"><div>                            <div id="903a8586-71e5-4b86-8a19-ebcf7ec19deb" class="plotly-graph-div" style="height:420px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("903a8586-71e5-4b86-8a19-ebcf7ec19deb")) {                    Plotly.newPlot(                        "903a8586-71e5-4b86-8a19-ebcf7ec19deb",                        [{"hovertemplate":"%{text}\u003cbr\u003eTER: %{x} bps\u003cbr\u003eAUM: $%{y:.1f}bn\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#1f6feb","#1f6feb","#1f6feb","#1f6feb","#f59e0b","#f59e0b"],"line":{"color":"white","width":1},"size":16},"mode":"markers+text","text":["BlackRock","State Street","Vanguard","Xtrackers","Amundi","Invesco"],"textposition":"top center","x":[7.000000000000001,3.0,7.000000000000001,3.0,5.0,5.0],"y":[154.5,19.2,36.3,4.2,33.6,59.1],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"margin":{"l":10,"r":40,"t":50,"b":40},"font":{"family":"system-ui, -apple-system, Segoe UI, Roboto, sans-serif","color":"#0b1f3a"},"title":{"text":"TER vs fund size"},"xaxis":{"title":{"text":"TER (basis points)"}},"yaxis":{"title":{"text":"AUM (USD billions)"}},"height":420,"plot_bgcolor":"white","paper_bgcolor":"white","showlegend":false},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div></div>
+
+  <div class="card">
+    <h2>Comparison table</h2>
+    
+<table class="compare">
+  <thead>
+    <tr>
+      <th>Provider</th><th>Fund</th><th>Share class</th><th>Listing</th>
+      <th class="num">TER (bps)</th><th class="num">AUM</th>
+      <th class="num">Holdings</th><th class="num">Risk</th>
+      <th>Replication</th><th>Label</th><th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>State Street</td>
+      <td>SPDR S&P 500 UCITS ETF (Acc)</td>
+      <td>USD Acc</td>
+      <td>LSE</td>
+      <td class="num">3</td>
+      <td class="num">$19.2bn</td>
+      <td class="num">503</td>
+      <td class="num">6/7</td>
+      <td>Physical</td>
+      <td>Cost leader</td>
+      <td><a href="https://www.ssga.com/uk/en_gb/intermediary/etfs/state-street-spdr-sp-500-ucits-etf-acc-spyl-gy" target="_blank">webpage</a> · <a href="https://www.ssga.com/library-content/kiids?isin=IE000XZSV718&documentType=kiid&country=uk&language=en_gb&ticker=spyl-gy" target="_blank">KIID</a> · <a href="https://www.ssga.com/library-content/products/factsheets/etfs/emea/factsheet-emea-en_gb-spyl-gy.pdf" target="_blank">factsheet</a></td>
+    </tr>
+    <tr>
+      <td>Xtrackers</td>
+      <td>Xtrackers S&P 500 UCITS ETF 4C</td>
+      <td>USD Acc</td>
+      <td>LSE</td>
+      <td class="num">3</td>
+      <td class="num">$4.2bn</td>
+      <td class="num">504</td>
+      <td class="num">6/7</td>
+      <td>Physical</td>
+      <td>Cost leader</td>
+      <td><a href="https://etf.dws.com/en-gb/IE000Z9SJA06-s-p-500-ucits-etf-4c/" target="_blank">webpage</a> · <a href="https://etf.dws.com/download/asset/838eee43-e5fb-422e-9d10-e028b5fe3494" target="_blank">KIID</a> · <a href="https://etf.dws.com/download/asset/8c8f9cdc-9c64-4314-a25b-8222c6344e90" target="_blank">factsheet</a></td>
+    </tr>
+    <tr>
+      <td>Invesco</td>
+      <td>Invesco S&P 500 UCITS ETF Acc</td>
+      <td>USD Acc</td>
+      <td>LSE</td>
+      <td class="num">5</td>
+      <td class="num">$59.1bn</td>
+      <td class="num">503</td>
+      <td class="num">6/7</td>
+      <td>Synthetic</td>
+      <td>Balanced</td>
+      <td><a href="https://www.invesco.com/uk/en/financial-products/etfs/invesco-sp-500-ucits-etf-acc.html#Holdings" target="_blank">webpage</a> · <a href="https://www.invesco.com/content/dam/invesco/uk/en/product-documents/etf/share-class/kiid/IE00B3YCGJ38_kiid_en-uk.pdf" target="_blank">KIID</a> · <a href="https://www.invesco.com/content/dam/invesco/uk/en/product-documents/etf/share-class/factsheet/IE00B3YCGJ38_factsheet_en-uk.pdf" target="_blank">factsheet</a></td>
+    </tr>
+    <tr>
+      <td>Amundi</td>
+      <td>Amundi Core S&P 500 Swap UCITS ETF USD Dist</td>
+      <td>USD Dist</td>
+      <td>LSE</td>
+      <td class="num">5</td>
+      <td class="num">$33.6bn</td>
+      <td class="num">503</td>
+      <td class="num">6/7</td>
+      <td>Synthetic</td>
+      <td>None</td>
+      <td><a href="https://www.amundietf.co.uk/en/individual/products/equity/amundi-core-sp-500-swap-ucits-etf-usd-dist/lu0496786657" target="_blank">webpage</a> · <a href="https://www.amundietf.co.uk/pdfDocuments/kiid/LU0496786657/ENG/GBR/20260211" target="_blank">KIID</a> · <a href="https://www.amundietf.co.uk/pdfDocuments/monthly-factsheet/LU0496786657/ENG/GBR/RETAIL/ETF/20260930" target="_blank">factsheet</a></td>
+    </tr>
+    <tr>
+      <td>Vanguard</td>
+      <td>Vanguard S&P 500 UCITS ETF</td>
+      <td>USD Acc</td>
+      <td>LSE</td>
+      <td class="num">7</td>
+      <td class="num">$36.3bn</td>
+      <td class="num">504</td>
+      <td class="num">6/7</td>
+      <td>Physical</td>
+      <td>None</td>
+      <td><a href="https://www.vanguardinvestor.co.uk/investments/vanguard-s-and-p-500-ucits-etf-usd-accumulating/overview" target="_blank">webpage</a> · <a href="https://fund-docs.vanguard.com/ie00bfmxxd54-en.pdf" target="_blank">KIID</a></td>
+    </tr>
+    <tr>
+      <td>BlackRock</td>
+      <td>iShares Core S&P 500 UCITS ETF</td>
+      <td>USD Acc</td>
+      <td>LSE</td>
+      <td class="num">7</td>
+      <td class="num">$154.5bn</td>
+      <td class="num">504</td>
+      <td class="num">6/7</td>
+      <td>Physical</td>
+      <td>Scale leader</td>
+      <td><a href="https://www.blackrock.com/uk/individual/products/253743/ishares-sp-500-b-ucits-etf-acc-fund" target="_blank">webpage</a> · <a href="https://www.blackrock.com/uk/literature/kiid/ucits_kiid-ishares-core-sp-500-ucits-etf-usd-acc-gb-ie00b5bmr087-en.pdf" target="_blank">KIID</a> · <a href="https://www.blackrock.com/uk/literature/fact-sheet/cspx-ishares-core-s-p-500-ucits-etf-fund-fact-sheet-en-gb.pdf" target="_blank">factsheet</a></td>
+    </tr></tbody>
+</table>
+
+  </div>
+
+  
+<div class="card">
+  <h2>Narrative</h2>
+  <p class="narrative-headline">S&P 500 UCITS ETF cost and scale comparison</p>
+  <div class="fact-grid"><div class="fact"><div class="fact-label">Cheapest provider</div><div class="fact-value">State Street at 3 bps</div></div><div class="fact"><div class="fact-label">Most expensive provider</div><div class="fact-value">BlackRock at 7 bps</div></div><div class="fact"><div class="fact-label">Spread across the set</div><div class="fact-value">4 bps</div></div><div class="fact"><div class="fact-label">Largest fund</div><div class="fact-value">BlackRock at $154.5bn</div></div><div class="fact"><div class="fact-label">Smallest fund</div><div class="fact-value">Xtrackers at $4.2bn</div></div><div class="fact"><div class="fact-label">Balanced funds</div><div class="fact-value">Invesco</div></div></div>
+  <p class="narrative-body">The cost spread of 4 bps between State Street and BlackRock looks small in percentage terms but compounds into roughly 40 per year on a 100,000 position, or about 800 over twenty years before compounding. The cheapest funds, State Street and Xtrackers at 3 bps, are not the largest. BlackRock dominates on scale at $154.5bn while charging 7 bps. That fragmentation is the central finding. Cost leadership and scale leadership sit in different providers, so a client choosing purely on price gives up liquidity and secondary market depth, and a client choosing purely on scale pays for it. The set splits 4 physical and 2 synthetic, yet the cheapest funds here are physical, so the assumption that synthetic always costs less does not hold across this group.</p>
+</div>
+
+
+  <a class="open-btn" href="etf_dashboard.html" target="_blank">Open Dashboard in New Tab ↗</a>
+
+  <footer>ETF Cost Intelligence Engine · analytical exercise, not investment advice.</footer>
+</div>
+</body>
+</html>
